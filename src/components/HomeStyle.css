@@ -1,0 +1,19 @@
+.home-container {
+    display: flex;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+  }
+  
+  .content h1 {
+    color: #1e293b;
+  }
+  
+  .content p {
+    color: #64748b;
+    margin-top: 10px;
+  }
+  
