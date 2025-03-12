@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ComplaintReport = () => {
+const Complaintreport = () => {
   return (
     <div>
       <h2>Complaint Report</h2>
@@ -9,4 +9,4 @@ const ComplaintReport = () => {
   );
 };
 
-export default ComplaintReport;
+export default Complaintreport;

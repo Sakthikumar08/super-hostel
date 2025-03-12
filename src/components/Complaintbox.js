@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ComplaintBox = () => {
+const Complaintbox = () => {
   return (
     <div>
       <h2>Complaint Box</h2>
@@ -9,4 +9,4 @@ const ComplaintBox = () => {
   );
 };
 
-export default ComplaintBox;
+export default Complaintbox;
