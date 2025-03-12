@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-const analytics = () => {
+const Analytics = () => {
   return (
     <div>
-      
+      <h2>Analytics</h2>
+      <p>Analytics data will be displayed here.</p>
     </div>
-  )
-}
+  );
+};
 
-export default analytics
+export default Analytics;

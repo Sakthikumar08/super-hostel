@@ -1,18 +1,19 @@
-
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './NavbarStyle.css';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="navbar">
-      <h2 className="logo">Smart building management system</h2>
-       {/*  <nav>
-        <NavLink to="/" className="nav-link" activeClassName="active">Home</NavLink>
-        <NavLink to="/complaint-box" className="nav-link" activeClassName="active">Complaint Box</NavLink>
-        <NavLink to="/complaint-report" className="nav-link" activeClassName="active">Complaint Report</NavLink>
-        <NavLink to="/analytics" className="nav-link" activeClassName="active">Analytics</NavLink>
-      </nav>  */} 
+      <h2 className="logo">Smart Management System</h2>
+      <nav>
+        <button onClick={() => navigate('/')}>Home</button>
+        <button onClick={() => navigate('/complaint-box')}>Complaint Box</button>
+        <button onClick={() => navigate('/complaint-report')}>Complaint Report</button>
+        <button onClick={() => navigate('/analytics')}>Analytics</button>
+      </nav>
     </div>
   );
 };

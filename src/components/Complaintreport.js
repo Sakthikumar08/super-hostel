@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-const Complaintreport = () => {
+const ComplaintReport = () => {
   return (
     <div>
-      
+      <h2>Complaint Report</h2>
+      <p>View complaint reports here.</p>
     </div>
-  )
-}
+  );
+};
 
-export default Complaintreport
+export default ComplaintReport;
