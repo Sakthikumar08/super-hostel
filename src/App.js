@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Complaintbox from './components/Complaintbox';
 import Complaintreport from './components/Complaintreport';
 import Analytics from './components/Analytics';
+import Complaintform from './components/Complaintform';
 import './App.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/complaint-box" element={<Complaintbox />} />
             <Route path="/complaint-report" element={<Complaintreport />} />
             <Route path="/analytics" element={<Analytics />} />
+            <Route path="/complaintform" element={<Complaintform />} />
           </Routes>
         </div>
       </div>
