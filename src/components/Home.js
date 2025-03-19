@@ -2,6 +2,7 @@ import React from 'react';
 import './HomeStyle.css';
 import ComplaintCards from './Complaintcards';
 import Roomcleanreport from './Roomcleanreport';
+import Getuserdetail from './Getuserdetail';
 
 const Home = () => {
   return (
@@ -11,7 +12,7 @@ const Home = () => {
         Efficiently manage hostel facilities, track maintenance, and ensure a safe environment. <br />
         Stay informed with real-time updates and feedback for continuous improvements.
       </p>
-
+   
       <div className="content-wrapper">
         <div className="complaint-section">
           <ComplaintCards />

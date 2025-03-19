@@ -3,38 +3,42 @@ import { PieChart, Pie, Tooltip, Cell, BarChart, Bar, XAxis, YAxis, CartesianGri
 import "./AnalyticsStyle.css";
 
 const pieData = [
-  { name: "IT", complaints: 10 },
-  { name: "HR", complaints: 5 },
-  { name: "Finance", complaints: 7 },
-  { name: "Admin", complaints: 3 },
-  { name: "Support", complaints: 8 },
+  { name: "Electrical", complaints: 10 },
+  { name: "Plumbing", complaints: 5 },
+  { name: "Carpentry", complaints: 7 },
+  { name: "Internet", complaints: 3 },
+  { name: "Security", complaints: 8 },
+  { name: "Food", complaints: 8 },
 ];
 
 const barData = [
   { department: "Electrical", complaints: 12 },
-  { department: "Pumping", complaints: 8 },
-  { department: "HVAC", complaints: 15 },
-  { department: "Maintenance", complaints: 10 },
+  { department: "Plumbing", complaints: 8 },
+  { department: "Carpentry", complaints: 15 },
+  { department: "Internet", complaints: 10 },
   { department: "Security", complaints: 5 },
+  { department: "Food", complaints: 6 },
 ];
 
 const updatedData = [
   { department: "Electrical", updated: 5 },
-  { department: "Pumping", updated: 4 },
-  { department: "HVAC", updated: 10 },
-  { department: "Maintenance", updated: 7 },
+  { department: "Plumbing", updated: 4 },
+  { department: "Carpentry", updated: 10 },
+  { department: "Internet", updated: 7 },
   { department: "Security", updated: 3 },
+  { department: "Food", updated: 4 },
 ];
 
 const completedData = [
   { department: "Electrical", completed: 7 },
-  { department: "Pumping", completed: 4 },
-  { department: "HVAC", completed: 5 },
-  { department: "Maintenance", completed: 3 },
+  { department: "Plumbing", completed: 4 },
+  { department: "Carpentry", completed: 5 },
+  { department: "Internet", completed: 3 },
   { department: "Security", completed: 2 },
+  { department: "Food", completed: 2 },
 ];
 
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF"];
+const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF","#FFBB78"];
 
 const Analytics = () => {
   return (

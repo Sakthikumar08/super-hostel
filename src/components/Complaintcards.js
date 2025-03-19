@@ -4,15 +4,15 @@ import { CheckCircle, RefreshCcw, AlertCircle } from 'lucide-react';
 
 const complaintData = [
   {
-    title: 'Faulty Infrastructure',
+    title: 'Room & Infrastructure Issues',
     description: 'Broken chairs, damaged classrooms, elevator malfunctions.',
     raised: 5,
     updated: 3,
     completed: 2,
   },
   {
-    title: 'Electrical Issues',
-    description: 'Power failures, non-functional lights, AC/heater problems.',
+    title: 'Electrical & Power Issues',
+    description: 'Frequent power outages, non-functional lights, faulty charging points, or AC/fan malfunctions.',
     raised: 7,
     updated: 4,
     completed: 3,
@@ -26,18 +26,25 @@ const complaintData = [
   },
   {
     title: 'Internet & Network Connectivity',
-    description: 'Slow or non-functional WiFi in classrooms and hostels.',
+    description: 'Weak or no WiFi in hostel rooms, slow speed, or connectivity issues in common areas.',
     raised: 4,
     updated: 2,
     completed: 1,
   },
   {
-    title: 'Security Concerns',
-    description: 'Malfunctioning CCTV, broken doors, or unauthorized access.',
+    title: 'Security & Safety Concerns',
+    description: 'CCTV not working, broken locks, unauthorized entry, or security personnel issues.',
     raised: 3,
     updated: 1,
     completed: 2,
   },
+  {
+    title: 'Mess & Food Complaints',
+    description: 'Unhygienic food, lack of variety, quality issues, or improper meal timings.',
+    raised: 3,
+    updated: 1,
+    completed: 2,
+  }
 ];
 
 const ComplaintCards = () => {
