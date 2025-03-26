@@ -3,12 +3,13 @@ import "./ComplaintcardStyle.css";
 import { CheckCircle, RefreshCcw, AlertCircle, DollarSign } from "lucide-react";
 
 const ComplaintCards = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const [complaintData, setComplaintData] = useState([]);
 
   useEffect(() => {
     const fetchComplaintStats = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/complaints/statsByType"); // API URL
+        const response = await fetch(`${API_URL}/api/complaints/statsByType`); // API URL
         const data = await response.json();
         setComplaintData(data);
       } catch (error) {

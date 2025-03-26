@@ -3,6 +3,7 @@ import axios from "axios";
 import "./LaundryStyle.css";
 
 const Laundry = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const [formData, setFormData] = useState({
     name: "",
     department: "",
@@ -21,7 +22,7 @@ const Laundry = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/laundry", formData);
+      await axios.post(`${API_URL}/api/laundry`, formData);
       alert("Laundry details submitted successfully!");
       setFormData({ name: "", department: "", year: "", noOfDresses: "", date: "", image: "" });
     } catch (error) {

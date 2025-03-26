@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./LoginStyle.css";
 
 const Login = ({ onLogin }) => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const [rollNo, setRollNo] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -17,7 +18,7 @@ const Login = ({ onLogin }) => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/users/login", {
+      const response = await fetch(`${API_URL}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,6 +67,8 @@ const Login = ({ onLogin }) => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+          <p>username:22ec251 </p>
+          <p>password:arun2004</p>
           <button type="submit" className="login-button">Login</button>
         </form>
       </div>

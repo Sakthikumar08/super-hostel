@@ -3,6 +3,7 @@ import axios from 'axios';
 import "./GetuserdetailStyle.css";
 
 const Getuserdetail = ({ rollNo }) => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,7 +18,7 @@ const Getuserdetail = ({ rollNo }) => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/users/details?rollNo=${rollNo}`, {
+        const response = await axios.get(`${API_URL}/api/users/details?rollNo=${rollNo}`, {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ Send token for authentication
           },

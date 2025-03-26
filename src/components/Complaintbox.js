@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './ComplaintboxStyle.css';
 
 const Complaintbox = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const navigate = useNavigate();
 
   const complaints = [

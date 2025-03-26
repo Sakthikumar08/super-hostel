@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import './ComplaintboxStyle.css';
 
 const Complaintform = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   const location = useLocation();
   const navigate = useNavigate();
  /*  const complaintType = location.state?.type || 'General Complaint'; */
@@ -28,7 +29,7 @@ const Complaintform = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5000/api/complaints', {
+      const response = await fetch(`${API_URL}/api/complaints`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

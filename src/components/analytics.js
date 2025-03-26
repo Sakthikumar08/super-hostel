@@ -3,6 +3,7 @@ import { PieChart, Pie, Tooltip, Cell, BarChart, Bar, XAxis, YAxis, CartesianGri
 import "./AnalyticsStyle.css";
 
 const pieData = [
+
   { name: "Electrical", complaints: 10 },
   { name: "Plumbing", complaints: 5 },
   { name: "Carpentry", complaints: 7 },
@@ -41,6 +42,7 @@ const completedData = [
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#AF19FF","#FFBB78"];
 
 const Analytics = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   return (
     <div className="analytics-container">
       <h2>Analytics</h2>

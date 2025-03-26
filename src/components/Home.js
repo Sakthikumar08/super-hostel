@@ -5,6 +5,7 @@ import Roomcleanreport from './Roomcleanreport';
 import Getuserdetail from './Getuserdetail';
 
 const Home = () => {
+  const API_URL = "https://fixit-hostel-backend.onrender.com";
   return (
     <div className="home-container">
       <h1 className="main-heading">FixIt Hostel</h1>
