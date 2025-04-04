@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
 
 
 const OutingRequest = () => {
@@ -24,6 +25,15 @@ const OutingRequest = () => {
     e.preventDefault();
     alert("Outing request submitted successfully!");
     setOutingRecords([...outingRecords, { id: outingRecords.length + 1, ...outingData, status: "Pending" }]);
+
+    // Reset the form
+    setOutingData({
+      year: "",
+      reason: "",
+      outingDate: "",
+      outingTime: "",
+      returnDate: "",
+    });
   };
 
   return (
@@ -44,21 +54,32 @@ const OutingRequest = () => {
               </tr>
             </thead>
             <tbody>
-              {outingRecords.sort((a, b) => new Date(b.outingDate) - new Date(a.outingDate)).map((record) => (
-                <tr
-                  key={record.id}
-                  className={`border border-gray-300 text-center ${record.status === "Completed" ? "opacity-50" : ""}`}
-                >
-                  <td className="p-3">{record.year}</td>
-                  <td className="p-3">{record.reason}</td>
-                  <td className="p-3">{record.outingDate}</td>
-                  <td className="p-3">{record.returnDate}</td>
-                  <td className={`p-3 font-semibold ${
-                    record.status === "Approved" ? "text-green-600" : record.status === "Pending" ? "text-yellow-600" : "text-gray-500"
-                  }`}>{record.status}</td>
-                  <td className="p-3">{record.status === "Approved" ? <QRCode value={record.id.toString()} size={50} /> : "-"}</td>
-                </tr>
-              ))}
+              {outingRecords
+                .sort((a, b) => new Date(b.outingDate) - new Date(a.outingDate))
+                .map((record) => (
+                  <tr
+                    key={record.id}
+                    className={`border border-gray-300 text-center ${record.status === "Completed" ? "opacity-50" : ""}`}
+                  >
+                    <td className="p-3">{record.year}</td>
+                    <td className="p-3">{record.reason}</td>
+                    <td className="p-3">{record.outingDate}</td>
+                    <td className="p-3">{record.returnDate}</td>
+                    <td
+                      className={`p-3 font-semibold ${
+                        record.status === "Approved"
+                          ? "text-green-600"
+                          : record.status === "Pending"
+                          ? "text-yellow-600"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      {record.status}
+                    </td>
+                    <td className="p-3">{record.status === "Approved" ? <QRCodeSVG value={record.id.toString()} size={50} /> : "-"}</td>
+
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>
@@ -72,6 +93,7 @@ const OutingRequest = () => {
             name="year"
             required
             onChange={handleChange}
+            value={outingData.year}
             className="w-full p-3 border border-gray-300 rounded-lg"
           >
             <option value="">Select Year</option>
@@ -85,6 +107,7 @@ const OutingRequest = () => {
             name="reason"
             placeholder="Reason for Outing"
             required
+            value={outingData.reason}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg"
           />
@@ -92,6 +115,7 @@ const OutingRequest = () => {
             type="date"
             name="outingDate"
             required
+            value={outingData.outingDate}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg"
           />
@@ -99,6 +123,7 @@ const OutingRequest = () => {
             type="time"
             name="outingTime"
             required
+            value={outingData.outingTime}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg"
           />
@@ -106,6 +131,7 @@ const OutingRequest = () => {
             type="date"
             name="returnDate"
             required
+            value={outingData.returnDate}
             onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg"
           />
