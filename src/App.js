@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Complaintbox from './components/Complaintbox';
 import Complaintreport from './components/Complaintreport';
-
+import Analytics from './components/Analytics';
 import Complaintform from './components/Complaintform';
 import Login from "./components/Login";
 import Laundry from "./components/Laundry";
@@ -43,7 +43,7 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/complaint-box" element={<Complaintbox />} />
               <Route path="/complaint-report" element={<Complaintreport />} />
-        {/*       <Route path="/analytics" element={<Analytics />} /> */}
+              <Route path="/analytics" element={<Analytics />} />
               <Route path="/complaintform" element={<Complaintform />} />
               <Route path="/laundry" element={<Laundry />} />
               <Route path="/outingrequest" element={<OutingRequest />} />
