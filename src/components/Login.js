@@ -68,7 +68,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           <p>username:22ec251 </p>
-          <p>username:22ec251 </p>
+          <p>password:arun2004 </p>
           
           <button type="submit" className="login-button">Login</button>
         </form>
