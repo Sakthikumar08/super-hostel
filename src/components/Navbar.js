@@ -18,6 +18,7 @@ const Navbar = ({ onLogout }) => {  // ✅ Accept onLogout as a prop
         <button onClick={() => navigate('/')}>Home</button>
         <button onClick={() => navigate('/complaint-box')}>Complaint Box</button>
         <button onClick={() => navigate('/complaint-report')}>Complaint Report</button>
+        <button onClick={() => navigate('/outingrequest')}>Outing Request</button>
         <button onClick={() => navigate('/analytics')}>Analytics</button>
         <button onClick={() => navigate('/laundry')}>Laundry</button>
         <button onClick={handleLogout}>Log Out</button>

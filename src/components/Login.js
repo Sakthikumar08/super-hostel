@@ -33,7 +33,7 @@ const Login = ({ onLogin }) => {
         return;
       }
 
-      localStorage.setItem("user", JSON.stringify(data.user)); // Store user in localStorage
+      localStorage.setItem("user", JSON.stringify(data.user)); 
       onLogin(); // Update authentication state in App.js
       navigate("/"); // Redirect to home after login
     } catch (error) {
